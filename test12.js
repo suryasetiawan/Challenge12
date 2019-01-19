@@ -13,7 +13,11 @@ const rl = readline.createInterface({
 });
 let hitung = 0;
 let salah = 0;
-console.log("Selamat datang di permainan Tebak-tebakan. Kamu akan diberikan pertanyaan dari file ini 'Data.json'. Untuk bermain, jawablah dengan jawaban yang sesuai. Gunakan 'skip'untuk menanguhkan pertanyaannya, dan di akhir pertanyaan akan ditanyakan lagi.");
+console.log("------------------------------------------------------------------------------------------------------");
+console.log("|Selamat datang di permainan Tebak-tebakan. Kamu akan diberikan pertanyaan dari file ini 'Data.json'.| ");
+console.log("|Untuk bermain, jawablah dengan jawaban yang sesuai.                                                 | ");
+console.log("|Gunakan 'skip'untuk menangguhkan pertanyaannya, dan diakhir pertanyaan akan ditanyakan lagi.        | ");
+console.log("------------------------------------------------------------------------------------------------------");
 console.log('Pertanyaan : ' + tanya[hitung].definition);
 
 rl.prompt();
@@ -33,7 +37,7 @@ rl.on('line', (jawaban) => {
             console.log(`Anda kurang beruntng! anda telah salah ${salah} kali, silahkan coba lagi`);
         }
         if (hitung < tanya.length) {
-            console.log('Pertanyaan :' + tanya[hitung].definition);
+            console.log('Pertanyaan : ' + tanya[hitung].definition);
 
         } else {
             console.log('Anda Berhasil');
